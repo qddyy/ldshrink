@@ -12,7 +12,8 @@
 // [[Rcpp::depends(RcppParallel)]]
 
 #include <RcppParallel.h>
-
+#include <tbb/blocked_range2d.h>
+#include <tbb/concurrent_vector.h>
 
 inline double calc_nmsum(const double m) {
   int msize = (2 * (int)m - 1);
